@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ToDo List</h1>
+
+      <form id="task-form" autocomplete="off">
+        <input
+          id="task-input"
+          type="text"
+          placeholder="Type your task..."
+          required
+        />
+      </form>
+
+      <ul id="task-list" aria-live="polite"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
