@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   async function handleSubmit(e) {
-    if (e && typeof e.preventDefault === "function") e.preventDefault();
+    e.preventDefault();
 
     try {
       const text = input.value.trim();
@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteBtn.type = "button";
     deleteBtn.textContent = "✕";
     deleteBtn.classList.add("delete-btn");
-    deleteBtn.addEventListener("click", async () => {
+    deleteBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
       const idx = li.dataset.index;
       li.remove();
       if (idx !== undefined) {
